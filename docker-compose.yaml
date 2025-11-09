@@ -1,0 +1,18 @@
+services:
+
+  nextexplorer:
+    image: nxzai/explorer:latest
+    container_name: nextexplorer
+    restart: unless-stopped
+    ports:
+      - "8200:3000"
+    environment:
+      - NODE_ENV=production
+      - PUBLIC_URL=http://localhost:8200  # https://explorer.example.com
+      - LOG_LEVEL=info       
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ./nextexplorer/cache:/cache   
+      - ./data/Projects:/mnt/Projects 
+      - ./data/Media:/mnt/Media      

@@ -9,10 +9,14 @@ services:
     environment:
       - NODE_ENV=production
       - PUBLIC_URL=http://localhost:8200  # https://explorer.example.com
-      - LOG_LEVEL=info       
+#      - LOG_LEVEL=info
+      - LOG_LEVEL=debug
+      - DEBUG=openid-client*      
       - PUID=1000
       - PGID=1000
     volumes:
       - ./nextexplorer/cache:/cache   
       - ./data/Projects:/mnt/Projects 
-      - ./data/Media:/mnt/Media      
+      - ./data/Downloads/config:/config
+      - ./data/Downloads:/mnt/Downloads
+#      - ./data/Media:/mnt/Media

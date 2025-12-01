@@ -7,11 +7,9 @@ services:
     ports:
       - "8200:3000"
     environment:
-      - NODE_ENV=production
-      - PUBLIC_URL=http://localhost:8200  # https://explorer.example.com
-#      - LOG_LEVEL=info
       - LOG_LEVEL=debug
-      - DEBUG=openid-client*      
+      - DEBUG=openid-client*
+      - PUBLIC_URL=http://localhost:8200  # https://explorer.example.com   
       - PUID=1000
       - PGID=1000
     volumes:
@@ -19,4 +17,3 @@ services:
       - ./data/Projects:/mnt/Projects 
       - ./data/Downloads/config:/config
       - ./data/Downloads:/mnt/Downloads
-#      - ./data/Media:/mnt/Media

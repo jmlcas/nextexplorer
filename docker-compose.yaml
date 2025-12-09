@@ -7,8 +7,7 @@ services:
     ports:
       - "8200:3000"
     environment:
-      - LOG_LEVEL=debug
-      - DEBUG=openid-client*
+      - NODE_ENV=production
       - PUBLIC_URL=http://localhost:8200  # https://explorer.example.com   
       - PUID=1000
       - PGID=1000

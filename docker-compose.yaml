@@ -10,11 +10,8 @@ services:
       - NODE_ENV=production
       - PUBLIC_URL=http://localhost:8200  # https://explorer.example.com
       - LOG_LEVEL=info
-      - PUID=1000
-      - PGID=1000
     volumes:
       - ./nextexplorer/cache:/cache   
       - ./data/Projects:/mnt/Projects 
       - ./data/Downloads/config:/config
       - ./data/Downloads:/mnt/Downloads
-
